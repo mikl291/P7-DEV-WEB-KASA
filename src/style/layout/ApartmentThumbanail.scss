@@ -1,0 +1,40 @@
+@use "../utils/colors.scss";
+@use "../utils/variables.scss";
+
+.LinkToApartmentPage {
+    text-decoration: none;
+    
+    
+    .Apartment {
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 0 auto;
+    }
+    img {
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 1rem;
+        filter: brightness(80%);
+        transform: scale(1);
+        &:hover {
+            box-shadow: 0px 2px 8px 3px rgba(115,115,115,0.38);
+            filter: brightness(100%);
+            transform: scale(1.01); 
+        }
+    @media screen and (max-width:variables.$mobile) {
+        min-height: 200px;
+        display: block;
+    }
+        }
+        
+        .Apartment__sub {
+            width: 50%;
+            color: rgb(255, 255, 255);
+            position: absolute;
+            bottom: 20px;
+            padding-left: 10px;
+            
+        }
+    }

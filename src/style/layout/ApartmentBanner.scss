@@ -1,0 +1,43 @@
+@use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+
+.bannerApartment {
+    position: relative;
+    height: 30rem;
+    width: 100%;
+
+
+    .btnPrevious {
+        @include mixins.btnChevronModel__left;
+    }
+    
+    .btnNext {
+        @include mixins.btnChevronModel__right;
+    }
+
+    .countCarousel {
+        position: absolute;
+        z-index: 1;
+        bottom: 30px;
+        left: 50%;
+        transform: translate(-50%);
+        color: white;
+        font-size: 20px;
+        font-weight: 100;
+    }
+    
+    img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    opacity: 0;
+    transition: 0.5s ease;
+    &.show {
+        opacity: 1;
+    }
+}}
+

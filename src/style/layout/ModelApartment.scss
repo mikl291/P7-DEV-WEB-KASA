@@ -1,0 +1,31 @@
+@use "../../style/utils/colors.scss";
+
+
+
+.ApartmentHeader {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+h1,
+h2,
+h3,
+p {
+    color: colors.$primary;
+}
+
+
+
+.Apartment__pan {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}

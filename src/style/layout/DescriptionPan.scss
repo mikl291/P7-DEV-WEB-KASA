@@ -1,0 +1,55 @@
+@use "../utils/colors.scss";
+
+
+
+.Apartment__description {
+    margin-bottom: 1rem;
+    flex-basis: 50%;
+    overflow: hidden;
+
+    p {
+        margin-block: 0;
+    }
+
+    .title {
+        color: white;
+        background-color: colors.$primary;
+        padding: 0.7rem;
+        border-radius: 5px;
+        padding-left: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+            color: white;
+        }
+
+        i {
+            margin-right: 10px;
+            font-size: 32px;
+            cursor: pointer;
+        }
+    }
+
+    .description {
+        position: relative;
+        top: -5px;
+        z-index: -1;
+        background-color: colors.$secondary;
+        padding: 2rem 1.5rem;
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+        &.hidden {
+            transform: translateY(-100%);           
+        }
+        &.visible {
+            transform: translateY(0);
+        }
+    }
+
+    li {
+        list-style: none;
+    }
+}
+
