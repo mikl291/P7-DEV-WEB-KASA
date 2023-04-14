@@ -1,10 +1,15 @@
 @use "../utils/colors.scss";
 @use "../utils/mixins.scss";
+@use "../utils/variables.scss";
 
 .bannerApartment {
     position: relative;
     height: 30rem;
     width: 100%;
+    margin-top: 1.5rem;
+    @media screen and (max-width:variables.$mobile) {
+        height: 20rem;
+    }
 
 
     .btnPrevious {
