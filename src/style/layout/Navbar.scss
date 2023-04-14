@@ -7,67 +7,40 @@
     justify-content: space-between;
     align-items: center;
     color: colors.$primary;
-    font-weight: 500;
     margin-top: 2rem;
 
     .navbar__logo img {
-      color: colors.$primary;
+      border-bottom: none;
     }
     
     .navbar__links {
         display: flex;
-        gap: 5rem;
+        gap: 1rem;
         list-style-type: none;
         padding: 0;
         
         }
         a {
             text-decoration: none;
-            color: inherit
-            
+            color: colors.$primary
         }
-        @media (max-width: 768px) {
+        & .active {
+          text-decoration: underline;
+        }
+        @media (max-width:  758px) {
             
             .navbar__links {
-                gap: 0.5rem;
+                font-size: 12px;
                 text-transform: uppercase;
-                font-size: 95%;
             }
         
             .navbar__logo img {
-              width: 195px;
-              height: 60px;
+              width: 7rem
             }
         }
     }
     
     
     
-    .nav-active {
-        position: relative;
     
-        &::after {
-            content: "";
-            position: absolute;
-            height: 1.5px;
-            width: 0;
-            bottom: 0px;
-            left: 50%;
-            transform: translate(-50%);
-            background: colors.$primary;
-            -webkit-animation: anim 0.3s ease forwards;
-            animation: anim 0.6s ease forwards;
-    
-            @-webkit-keyframes anim {
-              to {
-                width: 100%;
-              }
-            }
-            @keyframes anim {
-              to {
-                width: 100%;
-              }
-            }
-        }
-}
 
