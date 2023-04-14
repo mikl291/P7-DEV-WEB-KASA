@@ -24,6 +24,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        filter: brightness(3);
     img {
         color: colors.$secondary;
         width: 25%;       
