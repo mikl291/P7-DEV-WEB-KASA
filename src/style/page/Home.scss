@@ -1,0 +1,20 @@
+@use "../utils/variables.scss";
+@use "../utils/colors.scss";
+
+
+.ApartmentCards {
+    width: 100%;
+    padding: 100%;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: colors.$secondary;
+    @media screen and (max-width:variables.$mobile) {
+        padding: 0;
+        background-color: transparent;
+        margin-top: 0.7rem;
+        flex-direction: column;
+    }
+}
