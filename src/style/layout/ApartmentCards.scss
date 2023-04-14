@@ -1,23 +1,19 @@
 @use "../utils/colors.scss";
 @use "../utils/variables.scss";
+@use "../utils/mixins.scss";
 
 .ApartmentCards {
     background: colors.$secondary;
-    min-width: 35vh;
-    min-height: 50vh;
-    border-radius: 25px;
+    width: 100%;
+    @include mixins.border-card;
     display: flex;
     flex-flow: wrap;
-    gap: 60px;
+    gap: 1rem;
     margin-bottom: 2rem;
     justify-content: space-around;
-    
-
     @media (max-width: variables.$mobile) {
         background: white;
         justify-content: center;
-        width: 100%;
-        height: auto;
         padding: 0;
         gap: 0.7rem;    }
 }
