@@ -1,7 +1,7 @@
 @use '../utils/variables.scss';
 
 .main {
-    
+    width: 99%;
     @media (max-width:variables.$mobile) {
         margin: 0 auto;
     }
