@@ -1,12 +1,8 @@
 @use '../utils/variables.scss';
 
 .main {
-    margin: 0 5rem;
     
     @media (max-width:variables.$mobile) {
-        margin: 0 1rem;
-    }
-    @media (min-width:variables.$laptop) {
-        margin: 0 9rem;
+        margin: 0 auto;
     }
 }
