@@ -1,25 +1,19 @@
-import { useEffect, useState } from "react" 
-import { useLocation } from "react-router-dom" 
+import { useEffect, useState } from "react"
+export function useApartment(id) {
+    const [flat, setFlat] = useState(null)
 
-
-export function useApartment() {
-
-const [flat, setFlat] = useState(null)
-const location = useLocation() 
-
-useEffect(() => {
-    const abortController = new AbortController() 
-    fetch("db.json")
-        .then((res) => res.json())
-        .then((flats) => {
-            const flat = flats.find(flat => flat.id === location.state.ApartmentId) 
-            setFlat(flat)
-        })
-        .catch(console.error)
-  return () => {
-    abortController.abort()
-  }
-}, [])
-    return flat 
+    useEffect(() => {
+        const abortController = new AbortController()
+        fetch('./db.json', { signal: abortController.signal })
+            .then((res) => (res.json())
+                .then((flats) => {
+                    const flat = flats.find(flat => flat.id === id)
+                    setFlat(flat)
+                }))
+            .catch(console.error)
+        return () => {
+            abortController.abort()
+        }
+    }, [flat])
+    return flat
 }
-

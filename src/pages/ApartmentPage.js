@@ -3,17 +3,28 @@ import Navbar from '../components/Navbar'
 import Main from '../components/Main' 
 import Footer from '../components/Footer' 
 import ModelApartment from '../components/layout/ModelApartment.js' 
+import { useParams } from 'react-router-dom'
 
-const apartmentPage = () => {
+
+const ApartmentPage = () => {
+
+    const params = useParams();
+    const apartmentId = params.id
+
+    
+    console.log(apartmentId)
+
+    
+
     return (
         <div>
             <Main>
                 <Navbar />
-                <ModelApartment />
+                <ModelApartment apartmentId={apartmentId} />
             </Main>
             <Footer />
         </div>
     ) 
 } 
 
-export default apartmentPage 
+export default ApartmentPage 

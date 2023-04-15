@@ -3,14 +3,20 @@ import DescriptionPan from './DescriptionPan'
 import ApartmentBanner from './ApartmentBanner'
 import ApartmentTitle from './ApartmentTitle' 
 import ApartmentAside from './ApartmentAside' 
-import { useApartment } from '../../hooks/useApartment' 
+import { flats } from "react"
+import { useEffect, useState } from "react"
+import { useApartment } from "../../hooks/useApartment"
 
 
-const ModelApartment = () => {
-    const flat = useApartment() 
+
+const ModelApartment = ({apartmentId}) => {
+
+    
+    console.log(apartmentId)
+
+    
+    const flat =useApartment(apartmentId)
     if (flat == null) return <div>...Loading</div> 
-
-
     return (
         <section className='ApartmentPage'>
             <ApartmentBanner pictures={flat.pictures} />

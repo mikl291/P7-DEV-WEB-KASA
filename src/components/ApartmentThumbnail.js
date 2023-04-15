@@ -6,7 +6,7 @@ const ApartmentThumbnail = (props) => {
 
 
     return (
-            <NavLink className="LinkToApartmentPage" to="./ApartmentPage" state={ {
+            <NavLink className="LinkToApartmentPage" to={`/ApartmentPage/${props.id}`} state={ {
                 ApartmentId: props.id
             }}>
         <div className='Apartment'>
